@@ -1,0 +1,52 @@
+
+<table class="calss3">
+    <tr>
+      <td class="class1">
+  Filter:
+  <input type="search" name="search" [(ngModel)]="search" id="search">
+  </td>
+  <td class="class2">
+    <button (click)="addContact()" id="add">Add new Customer</button>
+  </td>
+  </tr>
+  </table>
+  
+  <table>
+
+    <tr>
+    <th>
+      First Name
+    </th>
+    <th>
+      Last Name
+    </th>
+    <th>
+      Address
+    </th>
+    <th>
+      City
+    </th>
+    <th>
+      State
+    </th>
+    </tr>
+    <div *ngFor="let contact of contacts">
+      <tr>
+        <td  (click)=editContact(contact.firstname)>
+            {{contact.firstname}}
+        </td>
+        <td>
+            {{contact.lastname}}
+        </td>
+        <td>
+            {{contact.address}}
+        </td>
+        <td>
+            {{contact.city}}
+        </td>
+        <td>
+            {{contact.state}}
+        </td>
+      </tr>
+    </div>
+  </table>
